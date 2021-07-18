@@ -92,8 +92,9 @@ VisualizeMatching(MatchingSplitDistance, TreeTools::BalancedTree(6),
 }
 \seealso{
 Other tree distances: 
+\code{\link{HierachicalVariation}()},
 \code{\link{JaccardRobinsonFoulds}()},
-\code{\link{KendallColijn}()},
+\code{\link{KCVector}()},
 \code{\link{MASTSize}()},
 \code{\link{NNIDist}()},
 \code{\link{NyeSimilarity}()},
