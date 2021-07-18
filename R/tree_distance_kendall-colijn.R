@@ -19,7 +19,7 @@
 #' leaf to another.
 #' 
 #' @template tree12ListParams
-#' @param Vector Function convering a tree to a numeric vector. 
+#' @param Vector Function converting a tree to a numeric vector. 
 #' `KCVector`, the default, returns the number of edges between the common
 #' ancestor of each pair of leaves and the root of the tree (per
 #' Kendall & Colijn 2016).
@@ -58,6 +58,7 @@
 #' 
 #' @references \insertRef{SmithSpace}{TreeDist}
 #' @family tree distances
+#' @importFrom utils combn
 #' @encoding UTF-8
 #' @export
 KendallColijn <- function (tree1, tree2 = NULL, Vector = KCVector) {
@@ -115,6 +116,7 @@ KendallColijn <- function (tree1, tree2 = NULL, Vector = KCVector) {
 #' as described in Kendall & Colijn (2016).
 #' @param tree A tree of class \code{\link[ape:read.tree]{phylo}}.
 #' @importFrom TreeTools AllAncestors Preorder
+#' @importFrom utils combn
 #' @export
 KCVector <- function (tree) {
   tree <- Preorder(tree)
@@ -138,6 +140,7 @@ KCVector <- function (tree) {
 #' @describeIn KendallColijn Creates a vector reporting the path length between
 #' each pair of leaves, per the path metric of Steel & Penny (1993).
 #' @importFrom TreeTools AllAncestors Preorder
+#' @importFrom utils combn
 #' @export
 PathVector <- function (tree) {
   tree <- Preorder(tree)

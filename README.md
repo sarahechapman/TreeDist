@@ -1,6 +1,6 @@
 # TreeDist
 
-[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/ms609/TreeDist/branch/master/graph/badge.svg)](https://codecov.io/gh/ms609/TreeDist)
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/TreeDist)](https://cran.r-project.org/package=TreeDist)
 [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/TreeDist)](https://cran.r-project.org/package=TreeDist)
@@ -9,7 +9,8 @@
 'TreeDist' is an R package that implements a suite of metrics that quantify the
 topological distance between pairs of unweighted phylogenetic trees.
 It also includes a simple 'Shiny' application to allow the visualization of
-distance-based tree spaces.
+distance-based tree spaces, and functions to calculate the information content
+of trees and splits.
 
 'TreeDist' primarily employs metrics in the category of
 'generalized Robinson–Foulds distances': they are based on comparing splits
@@ -101,7 +102,7 @@ common analytical pitfalls (Smith, forthcoming),
 using the inbuilt graphical user interface:
 
 ```r
-TreeDist::Project()
+TreeDist::MapTrees()
 ```
 
 Serious analysts should consult the

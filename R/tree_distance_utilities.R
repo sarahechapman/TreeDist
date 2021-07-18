@@ -9,6 +9,7 @@
 #' @template MRS
 #' @keywords internal
 #' @importFrom TreeTools as.Splits TipLabels
+#' @importFrom utils combn
 #' @export
 CalculateTreeDistance <- function (Func, tree1, tree2 = NULL,
                                    reportMatching = FALSE, ...) {
@@ -214,7 +215,8 @@ CalculateTreeDistance <- function (Func, tree1, tree2 = NULL,
 #' @export
 Entropy <- function (...) {
   p <- c(...)
-  -sum(p[p > 0] * log2(p[p > 0]))
+  p <- p[p > 0]
+  -sum(p * log2(p))
 }
 
 #' Distances between each pair of trees

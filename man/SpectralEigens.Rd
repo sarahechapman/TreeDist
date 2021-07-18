@@ -24,13 +24,13 @@ clustered using a method of choice.
 \description{
 Spectral clustering emphasizes nearest neighbours when forming clusters;
 it avoids some of the issues that arise from clustering around means /
-medioids.
+medoids.
 }
 \examples{
 library('TreeTools', quietly = TRUE, warn.conflict = FALSE)
 trees <- as.phylo(0:18, nTip = 8)
 distances <- ClusteringInfoDistance(trees)
-eigens <- SpectralClustering(distances)
+eigens <- SpectralEigens(distances)
 # Perform clustering:
 clusts <- kmeans(dist(eigens), centers = 3)
 plot(eigens, pch = 15, col = clusts$cluster)
@@ -38,8 +38,8 @@ plot(cmdscale(distances), pch = 15, col = clusts$cluster)
 }
 \seealso{
 Other tree space functions: 
-\code{\link{ProjectionQuality}()},
-\code{\link{Project}()},
+\code{\link{MapTrees}()},
+\code{\link{MappingQuality}()},
 \code{\link{median.multiPhylo}()}
 }
 \author{
