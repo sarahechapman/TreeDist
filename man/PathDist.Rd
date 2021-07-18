@@ -64,8 +64,9 @@ CompareAll(as.phylo(30:33, 8), PathDist)
 }
 \seealso{
 Other tree distances: 
+\code{\link{HierachicalVariation}()},
 \code{\link{JaccardRobinsonFoulds}()},
-\code{\link{KendallColijn}()},
+\code{\link{KCVector}()},
 \code{\link{MASTSize}()},
 \code{\link{MatchingSplitDistance}()},
 \code{\link{NNIDist}()},
