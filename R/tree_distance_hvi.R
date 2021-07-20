@@ -6,8 +6,6 @@
 #' @export
 HierachicalVariation <- function (tree1, tree2 = NULL) {
   library(reticulate)
-  #cat(tree1)
-  #cat(tree2)
   source_python("hit.py")
   VariationInformation <- HVI(tree1,tree2)
   VariationInformation
