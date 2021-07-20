@@ -52,9 +52,8 @@ CompareAll(as.phylo(30:33, 8), SPRDist)
 }
 \seealso{
 Other tree distances: 
-\code{\link{HierachicalVariation}()},
 \code{\link{JaccardRobinsonFoulds}()},
-\code{\link{KCVector}()},
+\code{\link{KendallColijn}()},
 \code{\link{MASTSize}()},
 \code{\link{MatchingSplitDistance}()},
 \code{\link{NNIDist}()},
