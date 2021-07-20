@@ -129,9 +129,8 @@ NyeSimilarity(as.phylo(0:5, nTip = 8), similarity = FALSE)
 }
 \seealso{
 Other tree distances: 
-\code{\link{HierachicalVariation}()},
 \code{\link{JaccardRobinsonFoulds}()},
-\code{\link{KCVector}()},
+\code{\link{KendallColijn}()},
 \code{\link{MASTSize}()},
 \code{\link{MatchingSplitDistance}()},
 \code{\link{NNIDist}()},
