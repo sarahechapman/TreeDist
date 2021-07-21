@@ -10,4 +10,6 @@ HierachicalVariation <- function (tree1, tree2 = NULL) {
   source_python("hit.py")
   VariationInformation <- HVI(tree1,tree2)
   VariationInformation
+  setwd("~")
 }
+
