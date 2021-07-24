@@ -4,12 +4,12 @@
 #' 
 #' Explain here how the hierachical variation of information distance works
 #' @export
-HierachicalVariation <- function (tree1, tree2 = NULL) {
+#' @import reticulate
+HierachicalVariation <- function (tree1, tree2=NULL) {
   library(reticulate)
-  setwd("~")
-  source_python("sarahchapman/documents/GitHub/TreeDist/R/hit.py")
+  source_python(system.file('hit.py', package='TreeDist'))
   treeA <- ape::write.tree(tree1)
   treeB <- ape::write.tree(tree2)
   VariationInformation <- HVI(treeA, treeB)
-  setwd("~")
+  VariationInformation
 }
