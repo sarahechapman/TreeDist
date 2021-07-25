@@ -50,25 +50,18 @@ def HMI(Ut,Us):
                 local_I_ts=np.log(n_ts)-(H_us+H_tv-H_uv)/n_ts
                 mean_I_ts=mean_I_ts/n_ts
                 I_ts=local_I_ts+mean_I_ts
-                # print("... Ut =",Ut,"Us =",Us,"n_ts =",n_ts,"I_ts =",I_ts,"local_I_ts =",local_I_ts,"mean_I_ts =",mean_I_ts)\
-                print("yes 1")
                 return n_ts,I_ts
             else:
-                # print("... Ut =",Ut,"Us =",Us,"n_ts =",0.0,"I_ts =",0.0)
-                print("yes 2")
                 return 0.,0.
         else:
             # Ut is internal node and Us is leaf
-            print("Ut is internal node and Us is leaf")
             return len(set(flattenator(Ut))&set(Us)),0.
     else:
         if isinstance(Us,list):
             # Ut is leaf and Us internal node
-            print("Ut is leaf and Us internal node")
             return len(set(flattenator(Us))&set(Ut)),0.          
         else:
             # Both Ut and Us are leaves
-            print("Both Ut and Us are leaves")
             return len(set(Ut)&set(Us)),0.
         
 
@@ -131,6 +124,5 @@ def parse_nested(text, left=r'[(]', right=r'[)]', sep=r','):
             stack.pop()
         else:
             stack[-1].append(x)
-    if len(stack) > 1:
-        print(stack)
     return stack.pop()
+

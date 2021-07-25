@@ -2,6 +2,11 @@
   library.dynam.unload("TreeDist", libpath)
 }
 
+.onLoad <- function (libname, pkgname) {
+  hit <- reticulate::source_python(system.file('hit.py', package='TreeDist'),envir=globalenv())
+  HVI <- hit$HVI
+}
+
 ## Reminders when releasing for CRAN
 release_questions <- function() {
   c(
