@@ -97,6 +97,18 @@ def HVI(hp1,hp2):
     """Returns the hierarchical variation of information."""
     return HH(hp1)+HH(hp2)-2.0*HMI(hp1,hp2)[1]
 
+def mean_arit(x,y):
+    return .5*(x+y)
+
+def NHMI(hp1,hp2,generalized_mean=mean_arit):
+    """Returns the normalized hierarchical mutual information.
+    
+    By default, it uses the arithmetic mean for normalization. However, another generalized mean can be provided if desired."""
+    gm = generalized_mean(HH(hp1),HH(hp2))
+    if gm > 0.:
+        return HMI(hp1,hp2)[1]/gm
+    return 0.
+
 def removeCommas(line):
     newline = line
     removals = 0

@@ -5,10 +5,10 @@
 #' Explain here how the hierachical variation of information distance works
 #' @export
 #' @import reticulate
-HierachicalVariation <- function (tree1, tree2=NULL) {
-  #source_python(system.file('hit.py', package='TreeDist'))
+HierachicalMutual <- function (tree1, tree2=NULL) {
   treeA <- ape::write.tree(tree1)
   treeB <- ape::write.tree(tree2)
-  VariationInformation <- HVI(treeA, treeB)
-  VariationInformation
+  MutualInformation <- NHMI(treeA, treeB)
+  MutualInformation
 }
+
