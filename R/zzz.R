@@ -5,6 +5,7 @@
 .onLoad <- function (libname, pkgname) {
   hit <- reticulate::source_python(system.file('hit.py', package='TreeDist'),envir=globalenv())
   NHMI <- hit$NHMI
+  d_n <-hit$d_n
 }
 
 ## Reminders when releasing for CRAN

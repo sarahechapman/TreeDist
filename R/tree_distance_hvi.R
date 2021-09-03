@@ -4,11 +4,12 @@
 #' 
 #' Explain here how the hierachical variation of information distance works
 #' @export
-#' @import reticulate
-HierachicalMutual <- function (tree1, tree2=NULL) {
+HierachicalMutual <- function (tree1, tree2=NULL, ...) {
   treeA <- ape::write.tree(tree1)
   treeB <- ape::write.tree(tree2)
-  MutualInformation <- NHMI(treeA, treeB)
+  MutualInformation <- d_n(treeA, treeB)
   MutualInformation
 }
 
+#' @export
+HierachicalMutual <- HierachicalMutual

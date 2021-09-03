@@ -138,3 +138,9 @@ def parse_nested(text, left=r'[(]', right=r'[)]', sep=r','):
             stack[-1].append(x)
     return stack.pop()
 
+def d_n(t1,t2,n=1):
+    """Computes the distance metric associated to the HVI given by
+        d_n(T,S)=1-exp(-n(ln(2)/2)V(T,S))
+    """
+    ln2d2=0.5*np.log(2.0)
+    return 1.0-np.exp(-n*ln2d2*HVI(t1,t2))
